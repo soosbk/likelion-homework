@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../Like Lion/html"
+		},
+		{
+			"path": "../../soosbk.github.io"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "html"
+	}
+}
