@@ -5,17 +5,22 @@ def index(request):
 
 
 def result(request):
+    #print(request.GET.get('sentence'))
     sentence = str(request.POST.get('sentence'))
     words = sentence.split()
-
+    
     word_counts = {}
     for word in words:
         if word in word_counts:
             word_counts[word] +=1
         else:
             word_counts[word] = 1
-    word_counts = list(word_counts.items())
+    #print(word_counts)
+    word_counts_list=list(word_counts.items())
+    word_counts_list.sort(key = lambda t : -t[1])
+    response={
+        'word_counts': word_counts_list
+    }
     
-    word_counts.sort(key = lambda t : -t[1])
 
-    return render(request, 'result.html', { 'word_counts': word_counts})
+    return render(request, 'result.html', response)
