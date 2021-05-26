@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Write your blog</h1>
+    
+    
+    <form action=" {%url 'create'%} " method="post" enctype="multipart/form-data">
+    
+        {%csrf_token%}
+        <p>제목: <input type='text' name='title'></p>
+        <p>작성자: <input type="text" name='publish'></p>
+        본문: <textarea name='body' id="" , cols="30" , rows="10"></textarea>
+        
+        <p>
+          사진: <input type='file' name='image' id=''>  
+        </p>
+        <button type='submit'> Submit</button>
+    
+    </form>
+    
+</body>
+</html>
